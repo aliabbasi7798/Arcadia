@@ -8,6 +8,5 @@ abstract class Card {
     public int getMagicPoint(){
         return magicPoint;
     }
-    public int a;
 
 }
