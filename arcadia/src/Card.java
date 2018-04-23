@@ -9,4 +9,11 @@ abstract class Card {
         return magicPoint;
     }
 
+    public void changePlace(boolean a){
+        if (a==true)
+            a=false;
+        else
+            a=true;
+    }
+
 }
