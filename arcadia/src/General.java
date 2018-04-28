@@ -1,9 +1,9 @@
 abstract class General extends MonsterCard{
-    public void enter(){
+    public void battleCry(){//do a magical work when entered
 
     }
 
-    public void exit(){
+    public void will(){//do a magical work when exited
 
     }
 }
