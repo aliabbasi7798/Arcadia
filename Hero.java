@@ -1,6 +1,6 @@
 abstract class Hero extends MonsterCard{
 
-    public void enter(){
+    public void battleCry(){//do a magical work when entered
 
     }
 
@@ -8,7 +8,7 @@ abstract class Hero extends MonsterCard{
 
     }
 
-    public void exit(){
+    public void will(){//do a magical work when exited
 
     }
 }
