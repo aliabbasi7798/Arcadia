@@ -1,10 +1,8 @@
 abstract class MonsterCard extends Card{
     protected int healthPoint;
     protected int attackPoint;
-    protected boolean graveYard=false;
+
     protected boolean playField=false;
-    protected boolean deck=true;
-    protected boolean hand=false;
 
     protected boolean nimble;
     protected boolean defender;
@@ -35,9 +33,10 @@ abstract class MonsterCard extends Card{
             death();
     }
 
+    @Override
     public void faceUp(){        /*face up card on play field*/
         changePlace(hand);
-        //do a magical work if card is general or hero
+        //do a magical work
         changePlace(playField);
     }
 

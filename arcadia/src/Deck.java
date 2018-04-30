@@ -4,7 +4,7 @@ class Deck
 {
     Card[] cards = new Card[1];
 
-    public void CatchCard()
+    public void catchCard()
     {
         Card card;
         Card[] cards1 = new Card[cards.length-1];
@@ -19,7 +19,8 @@ class Deck
     }
 
     public void getFirstCard() {
-        //go to hand
+        cards[0].catchCard();
+        //Hand.addCart(cards[0]);
     }
 
     public void addCard(Card card){
