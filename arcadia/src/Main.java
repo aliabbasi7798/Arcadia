@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     static boolean winner(MonsterCard tiger, MonsterCard james){
         if (tiger.attackPoint>james.healthPoint){
@@ -7,8 +9,7 @@ public class Main {
             return false;
     }
     public static void main(String[] args) {
-        Tiger tiger=new Tiger();
-        James james=new James();
-        System.out.println(winner(tiger, james));
+        Random r=new Random();
+        System.out.println(r.nextInt(5));
     }
 }

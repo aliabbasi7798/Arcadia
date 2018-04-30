@@ -1,6 +1,8 @@
-public class Deck
+import java.util.Random;
+
+class Deck
 {
-    Card[] cards = new Card[30];
+    Card[] cards = new Card[1];
 
     public void CatchCard()
     {
@@ -16,7 +18,27 @@ public class Deck
         cards = cards1;
     }
 
-    public Card getFirstCard() {
-        return cards[0];
+    public void getFirstCard() {
+        //go to hand
+    }
+
+    public void addCard(Card card){
+        Card[] card1=new Card[this.cards.length+1];
+        card1[0]=card;
+        for (int i=0 ; i<this.cards.length ; i++){
+            card1[i+1]=cards[i];
+        }
+        cards=card1;
+    }
+
+    public void shuffle(){
+        Random r=new Random();
+        for (int i=0 ; i<cards.length ; i++){
+            int n=r.nextInt(cards.length);
+            Card temp;
+            temp=cards[i];
+            cards[i]=cards[n];
+            cards[n]=temp;
+        }
     }
 }
