@@ -1,3 +1,3 @@
-abstract class AuraSpell extends SpellCard{
+class AuraSpell extends SpellCard{
 
 }

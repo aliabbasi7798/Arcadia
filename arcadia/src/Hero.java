@@ -1,4 +1,4 @@
-abstract class Hero extends MonsterCard{
+class Hero extends MonsterCard{
 
     public void battleCry(){//do a magical work when entered
 

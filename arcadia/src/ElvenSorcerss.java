@@ -1,5 +1,6 @@
 class ElvenSorcerss extends SpellCaster{
     public ElvenSorcerss(){
+        this.type="12";
         this.name="Elven Sorceress";
         this.attackPoint=1000;
         this.healthPoint=1000;

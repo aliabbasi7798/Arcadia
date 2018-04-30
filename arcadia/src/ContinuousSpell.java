@@ -1,3 +1,3 @@
-abstract class ContinuousSpell extends SpellCard{
+class ContinuousSpell extends SpellCard{
 
 }

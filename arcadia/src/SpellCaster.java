@@ -1,4 +1,4 @@
-abstract class SpellCaster extends MonsterCard{
+class SpellCaster extends MonsterCard{
     public void spell(){
 
     }

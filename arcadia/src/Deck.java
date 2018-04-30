@@ -1,8 +1,17 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 class Deck
 {
-    Card[] cards = new Card[1];
+    ContinuousSpell[] continuousSpells=new ContinuousSpell[1];
+    InstantSpell[] instantSpells=new InstantSpell[1];
+    AuraSpell[] auraSpells=new AuraSpell[1];
+
+    NormalMonster[] normalMonsters=new NormalMonster[1];
+    SpellCaster[] spellCasters=new SpellCaster[1];
+    General[] generals=new General[1];
+    Hero[] heroes=new Hero[1];
+
 
     public void catchCard()
     {
@@ -10,10 +19,10 @@ class Deck
         Card[] cards1 = new Card[cards.length-1];
 
         card = cards[0];
-        getFirstCard();
-        for(int i=1 ; i <= cards.length - 1 ; i++)
-        {
-            cards1[i-1] = cards[i];
+            cards
+            getFirstCard();
+            for(int i=1 ; i <= cards.length - 1 ; i++)
+            {1[i-1] = cards[i];
         }
         cards = cards1;
     }

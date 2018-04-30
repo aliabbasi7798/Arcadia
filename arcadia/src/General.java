@@ -1,4 +1,4 @@
-abstract class General extends MonsterCard{
+class General extends MonsterCard{
     public void battleCry(){//do a magical work when entered
 
     }
