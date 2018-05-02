@@ -1,7 +1,6 @@
 class ElvenDruid extends SpellCaster{
 
     public ElvenDruid(){
-        this.type="12";
         this.attackPoint=600;
         this.healthPoint=1500;
         this.nimble=false;

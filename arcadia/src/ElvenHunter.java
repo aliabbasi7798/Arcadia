@@ -1,7 +1,6 @@
 class ElvenHunter extends NormalMonster{
 
     public ElvenHunter(){
-        type="11";
         name="Elven Hunter";
         attackPoint=600;
         healthPoint=800;
@@ -9,5 +8,4 @@ class ElvenHunter extends NormalMonster{
         nimble=false;
         defender=false;
     }
-
 }

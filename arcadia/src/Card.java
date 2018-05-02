@@ -1,4 +1,4 @@
-class Card {
+ class Card {
     protected int magicPoint;
     protected boolean face=false;//face=true means known
     protected String name;
@@ -6,23 +6,9 @@ class Card {
     protected boolean deck=true;
     protected boolean hand=false;
     protected boolean graveYard=false;
-    protected String type;//"11":normal   "12":spellcaster    "13":general   "14":hero    "21":continuousspell  "22":instantspell   "23":auraspell
-
-    private int numberInDeck;
-    public Card(){
-
-    }
 
     public void setMagicPoint(int magicPoint){
         this.magicPoint=magicPoint;
-    }
-
-    public int getNumberInDeck() {
-        return numberInDeck;
-    }
-
-    public void setNumberInDeck(int numberInDeck) {
-        this.numberInDeck = numberInDeck;
     }
 
     public void catchCard(){       /*catch a card from deck to hand*/

@@ -1,7 +1,6 @@
 class NobleElf extends General{
 
     public NobleElf(){
-        this.type="13";
         this.name="Noble Elf";
         this.attackPoint=2400;
         this.healthPoint=2000;
