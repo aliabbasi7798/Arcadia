@@ -81,7 +81,7 @@ class Field {
     }
 
 
-    
+
     public void catchCard(ContinuousSpell continuousSpell)
     {
         ContinuousSpell[] continuousSpells1 = new ContinuousSpell[continuousSpells.length-1];
@@ -156,22 +156,22 @@ class Field {
         //Hand.addCart(continuousSpells[0]);
     }
     public void getFirstCardInstantSpell() {
-        //Hand.addCart(InstantSpell[0]);
+        //Hand.addCart(instantSpell[0]);
     }
     public void getFirstCardAuraSpell() {
-        //Hand.addCart(AuraSpell[0]);
+        //Hand.addCart(auraSpell[0]);
     }
     public void getFirstCardNormalMonster() {
-        //Hand.addCart(NormalMonster[0]);
+        //Hand.addCart(normalMonster[0]);
     }
     public void getFirstCardSpellCaster() {
-        //Hand.addCart(SpellCaster[0]);
+        //Hand.addCart(spellCaster[0]);
     }
     public void getFirstCardGeneral() {
-        //Hand.addCart(General[0]);
+        //Hand.addCart(general[0]);
     }
     public void getFirstCardHero() {
-        //Hand.addCart(Heros[0]);
+        //Hand.addCart(heros[0]);
     }
 
 
