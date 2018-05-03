@@ -79,6 +79,79 @@ class Field {
         heroes = heroes1;
 
     }
+
+
+    
+    public void catchCard(ContinuousSpell continuousSpell)
+    {
+        ContinuousSpell[] continuousSpells1 = new ContinuousSpell[continuousSpells.length-1];
+
+        getFirstCardContinuousSpell();
+        for(int i=0 ; i <= continuousSpells.length - 2 ; i++) {
+            continuousSpells1[i]=continuousSpells[i+1];
+        }
+        continuousSpells=continuousSpells1;
+    }
+    public void catchCard(InstantSpell instantSpell)
+    {
+        InstantSpell[] instantSpells1 = new InstantSpell[instantSpells.length-1];
+
+        getFirstCardInstantSpell();
+        for(int i=0 ; i <= instantSpells.length - 2 ; i++) {
+            instantSpells1[i]=instantSpells[i+1];
+        }
+        instantSpells=instantSpells1;
+    }
+    public void catchCard(AuraSpell auraSpell)
+    {
+        AuraSpell[] auraSpells1 = new AuraSpell[auraSpells.length - 1];
+        getFirstCardAuraSpell();
+        for(int i=0 ; i <= auraSpells.length - 2 ; i++) {
+            auraSpells1[i]=auraSpells[i+1];
+        }
+        auraSpells = auraSpells1;
+    }
+    public void catchCard(NormalMonster normalMonster)
+    {
+        NormalMonster[] normalMonsters1 = new NormalMonster[normalMonsters.length - 1];
+        getFirstCardNormalMonster();
+        for( int i=0 ; i <= normalMonsters.length - 2 ; i++)
+        {
+            normalMonsters1[i] = normalMonsters[i+1];
+        }
+        normalMonsters = normalMonsters1;
+    }
+    public void catchCard(SpellCaster spellCaster)
+    {
+        SpellCaster[] spellCasters1 = new SpellCaster[spellCasters.length - 1];
+        getFirstCardSpellCaster();
+        for(int i =0 ; i <= spellCasters.length - 2 ; i++)
+        {
+            spellCasters1[i] = spellCasters[i+1];
+        }
+        spellCasters = spellCasters1;
+    }
+    public void catchCard(General general)
+    {
+        General[] generals1 = new General[generals.length - 1];
+        getFirstCardGeneral();
+        for( int i=0 ; i <= generals.length - 2 ; i++ )
+        {
+            generals1[i] = generals[i+1];
+        }
+        generals = generals1;
+    }
+    public void catchCard(Hero hero)
+    {
+        Hero[] heroes1 = new Hero[heroes.length - 1 ];
+        getFirstCardHero();
+        for( int i=0 ; i <= heroes.length -  2  ; i++)
+        {
+            heroes1[i] = heroes[i+1];
+        }
+        heroes = heroes1;
+
+    }
     public void getFirstCardContinuousSpell() {
         //Hand.addCart(continuousSpells[0]);
     }
