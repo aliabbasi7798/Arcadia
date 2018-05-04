@@ -1,22 +1,22 @@
 class Hand extends Field{
 
 
-    public void catchCard(ContinuousSpell continuousSpell ,GraveYard graveYard)
+    public void catchCard(ContinuousSpell continuousSpell ,SpellField spellField)
     {
         ContinuousSpell[] continuousSpells1 = new ContinuousSpell[continuousSpells.length-1];
 
-        getFirstCardContinuousSpell(graveYard);
+        getFirstCardContinuousSpell(spellField);
         for(int i=0 ; i <= continuousSpells.length - 2 ; i++) {
             continuousSpells1[i]=continuousSpells[i+1];
         }
         continuousSpells=continuousSpells1;
     }
 
-    public void catchCard(InstantSpell instantSpell ,SpellField spellField)
+    public void catchCard(InstantSpell instantSpell ,GraveYard graveYard)
     {
         InstantSpell[] instantSpells1 = new InstantSpell[instantSpells.length-1];
 
-        getFirstCardInstantSpell(spellField);
+        getFirstCardInstantSpell(graveYard);
         for(int i=0 ; i <= instantSpells.length - 2 ; i++) {
             instantSpells1[i]=instantSpells[i+1];
         }
@@ -66,7 +66,7 @@ class Hand extends Field{
         generals = generals1;
     }
 
-    public void catchCard(Hero hero ,PlayField playField)
+     public void catchCard(Hero hero ,PlayField playField)
     {
         Hero[] heroes1 = new Hero[heroes.length - 1 ];
         getFirstCardHero(playField);
@@ -81,13 +81,13 @@ class Hand extends Field{
 
 
 
-    public void getFirstCardContinuousSpell(GraveYard graveYard) {
+    public void getFirstCardContinuousSpell(SpellField spellField) {
         continuousSpells[0].faceUp();
-        graveYard.addCard(continuousSpells[0]);
+        spellField.addCard(continuousSpells[0]);
     }
-    public void getFirstCardInstantSpell(SpellField spellField) {
+    public void getFirstCardInstantSpell(GraveYard graveYard) {
         instantSpells[0].faceUp();
-        spellField.addCard(instantSpells[0]);
+        graveYard.addCard(instantSpells[0]);
     }
     public void getFirstCardAuraSpell(SpellField spellField) {
         auraSpells[0].faceUp();
