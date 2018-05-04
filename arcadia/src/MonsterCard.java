@@ -7,6 +7,12 @@ class MonsterCard extends Card{
     protected boolean nimble;
     protected boolean defender;
 
+    public String kind;
+
+    public String getKind() {
+        return kind;
+    }
+
     public void setAttackPoint(int attackPoint) {
         this.attackPoint = attackPoint;
     }
