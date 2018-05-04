@@ -1,6 +1,6 @@
 class ElvenHunter extends NormalMonster{
 
-    public ElvenHunter(){
+    public ElvenHunter(int num){
         type="11";
         name="Elven Hunter";
         attackPoint=600;
@@ -8,6 +8,8 @@ class ElvenHunter extends NormalMonster{
         magicPoint=3;
         nimble=false;
         defender=false;
+        this.kind ="Elf";
+        this.numberInDeck = num;
     }
 
 }

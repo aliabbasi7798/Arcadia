@@ -1,6 +1,6 @@
 class ElvenRanger extends NormalMonster{
 
-    public ElvenRanger(){
+    public ElvenRanger(int num){
         this.type="11";
         this.attackPoint=400;
         this.healthPoint=300;
@@ -8,5 +8,7 @@ class ElvenRanger extends NormalMonster{
         name="Elven Ranger";
         nimble=false;
         defender=false;
+        this.kind = "Elf";
+        this.numberInDeck = num;
     }
 }

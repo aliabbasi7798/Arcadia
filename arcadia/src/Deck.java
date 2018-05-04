@@ -1,16 +1,8 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-class Deck
+class Deck extends Field
 {
-    ContinuousSpell[] continuousSpells=new ContinuousSpell[1];
-    InstantSpell[] instantSpells=new InstantSpell[1];
-    AuraSpell[] auraSpells=new AuraSpell[1];
-
-    NormalMonster[] normalMonsters=new NormalMonster[1];
-    SpellCaster[] spellCasters=new SpellCaster[1];
-    General[] generals=new General[1];
-    Hero[] heroes=new Hero[1];
 
 
 

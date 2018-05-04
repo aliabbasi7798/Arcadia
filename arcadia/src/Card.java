@@ -6,9 +6,9 @@ class Card {
     protected boolean deck=true;
     protected boolean hand=false;
     protected boolean graveYard=false;
-    protected String type;//"11":normal   "12":spellcaster    "13":general   "14":hero    "21":continuousspell  "22":instantspell   "23":auraspell
+    protected String type;//"11":normal   "12":spellcaster    "13":general   "14":hero    "22":continuousspell  "21":instantspell   "23":auraspell
 
-    private int numberInDeck;
+    protected int numberInDeck;
     public Card(){
 
     }

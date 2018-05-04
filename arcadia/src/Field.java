@@ -1,3 +1,4 @@
+import
 class Field {
     ContinuousSpell[] continuousSpells=new ContinuousSpell[1];
     InstantSpell[] instantSpells=new InstantSpell[1];
@@ -8,7 +9,49 @@ class Field {
     General[] generals=new General[1];
     Hero[] heroes=new Hero[1];
 
+    public int[] random(int continuousSpells , int instantSpells , int auraSpells , int  normalMonsters , int spellCasters ,int  generals , int heroes)
+    {
+        int
+        int number1 = 0;
+        number1 += continuousSpells;
+        int number2 = number1+instantSpells;
+        int number3 = number2+auraSpells;
+        int number4 = number3+normalMonsters;
+        int number5 = number4+spellCasters;
+        int number6 = number5+generals;
+        int number7 =  number6+heroes;
+        Random rnd = new Random();
+        int number = rnd.nextInt(number7)+1;
+        if(number >= 1 && number <=number1)
+        {
 
+        }
+        else if(number> number1 && number <= number2)
+        {
+
+        }
+        else if(number > number2 && number <= number3)
+        {
+
+        }
+        else if(number > number3 && number <= number4)
+        {
+
+        }
+        else if(number >number4 && number <= number5)
+        {
+
+        }
+        else if(number > number5 && number <= number6)
+        {
+
+        }
+        else
+        {
+
+        }
+
+    }
     public void catchCardContinuousSpell()
     {
         ContinuousSpell[] continuousSpells1 = new ContinuousSpell[continuousSpells.length-1];
