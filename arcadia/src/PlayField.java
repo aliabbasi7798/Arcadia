@@ -1,0 +1,2 @@
+class PlayField extends Field{
+}

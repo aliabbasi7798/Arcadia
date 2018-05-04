@@ -1,4 +1,4 @@
- class MonsterCard extends Card{
+class MonsterCard extends Card{
     protected int healthPoint;
     protected int attackPoint;
 

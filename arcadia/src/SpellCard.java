@@ -1,4 +1,4 @@
- class SpellCard extends Card{
+class SpellCard extends Card{
     protected boolean spellFeild=false;
 
 

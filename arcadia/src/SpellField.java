@@ -1,0 +1,2 @@
+class SpellField extends Field{
+}

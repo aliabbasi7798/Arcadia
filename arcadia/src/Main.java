@@ -1,15 +1,10 @@
 import java.util.Random;
-
+import java.io.*;
 public class Main {
-    static boolean winner(MonsterCard tiger, MonsterCard james){
-        if (tiger.attackPoint>james.healthPoint){
-            return true;
-        }
-        else
-            return false;
-    }
     public static void main(String[] args) {
-        Random r=new Random();
-        System.out.println(r.nextInt(5));
+        Card card=new Card();
+        ElvenDruid sd=new ElvenDruid();
+        card=sd;
+        System.out.println(card.name);
     }
 }
