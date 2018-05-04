@@ -1,8 +1,5 @@
-class PlayField extends Field
-{
+class PlayField extends Field {
     int numberOfCards = 0;
-
-
 
     public void catchCardNormalMonster(GraveYard graveYard)
     {

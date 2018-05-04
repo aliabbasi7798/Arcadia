@@ -1,10 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-class Deck extends Field
-{
-
-
+class Deck extends Field {
 
     public void catchCardContinuousSpell( Hand hand)
     {

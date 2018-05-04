@@ -1,5 +1,5 @@
 class SpellCard extends Card{
-    protected boolean spellFeild=false;
+    protected boolean spellField=false;
 
 
 
