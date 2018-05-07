@@ -2,6 +2,7 @@ class Card {
     protected int magicPoint;
     protected boolean face=false;//face=true means known
     protected String name;
+    protected String place;
 
     protected boolean deck=true;
     protected boolean hand=false;
@@ -12,6 +13,14 @@ class Card {
 
     public Card(){
 
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place){
+        this.place=place;
     }
 
     public void setMagicPoint(int magicPoint){

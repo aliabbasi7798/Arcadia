@@ -9,6 +9,7 @@ class MonsterCard extends Card{
 
     public String kind;
 
+
     public String getKind() {
         return kind;
     }

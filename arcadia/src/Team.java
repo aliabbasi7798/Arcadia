@@ -5,6 +5,54 @@ class Team {
     GraveYard graveYard=new GraveYard();
     PlayField playField=new PlayField();
     SpellField spellField=new SpellField();
+
+
+    public void changePlace(Field exit, Field enter, NormalMonster normalMonster){
+        enter.catchCard(normalMonster);
+        exit.addCard(normalMonster);
+        normalMonster.setName(enter.getName());
+    }
+
+    public void changePlace(Field exit, Field enter, SpellCaster spellCaster){
+        exit.catchCard(spellCaster);
+        enter.addCard(spellCaster);
+        spellCaster.setName(enter.getName());
+    }
+
+    public void changePlace(Field exit, Field enter, General general){
+        exit.catchCard(general);
+        enter.addCard(general);
+        general.setName(enter.getName());
+    }
+
+    public void changePlace(Field exit, Field enter, Hero hero){
+        exit.catchCard(hero);
+        enter.addCard(hero);
+        hero.setName(enter.getName());
+    }
+
+
+    public void changePlace(Field exit, Field enter, InstantSpell instantSpell){
+        exit.catchCard(instantSpell);
+        enter.addCard(instantSpell);
+        instantSpell.setName(enter.getName());
+    }
+
+    public void changePlace(Field exit, Field enter, ContinuousSpell continuousSpell){
+        exit.catchCard(continuousSpell);
+        enter.addCard(continuousSpell);
+        continuousSpell.setName(enter.getName());
+    }
+
+    public void changePlace(Field exit, Field enter, AuraSpell auraSpell){
+        exit.catchCard(auraSpell);
+        enter.addCard(auraSpell);
+        auraSpell.setName(enter.getName());
+    }
+
+
+
+
     public int random(Hand hand)
     {
         int number1 = 0;

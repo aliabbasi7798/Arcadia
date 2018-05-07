@@ -1,3 +1,4 @@
+import java.util.Random;
 class Field {
     ContinuousSpell[] continuousSpells=new ContinuousSpell[1];
     InstantSpell[] instantSpells=new InstantSpell[1];
@@ -8,99 +9,256 @@ class Field {
     General[] generals=new General[1];
     Hero[] heroes=new Hero[1];
 
+    protected String name;
 
-    public void catchCardContinuousSpell(int num)
-    {
-        for(int i = 0 ; i < continuousSpells.length; i ++){
-            if(continuousSpells[i].numberInDeck == num){
-                continuousSpells[i].changePlace(continuousSpells[i].spellField);
-                for(int j = i + 1 ; j < continuousSpells.length; i ++){
-                    continuousSpells[j-1] = continuousSpells[j];
-                }
-                ContinuousSpell[] continuousSpells1 = new ContinuousSpell[continuousSpells.length - 1];
-                continuousSpells = continuousSpells1;
-            }
-        }
-    }
-    public void catchCardInstantSpell(int num)
-    {
-        for(int i = 0 ; i < instantSpells.length; i ++){
-            if(instantSpells[i].numberInDeck == num){
-                instantSpells[i].changePlace(instantSpells[i].spellField);
-                for(int j = i + 1 ; j < instantSpells.length; i ++){
-                    instantSpells[j-1] = instantSpells[j];
-                }
-                InstantSpell[] instantSpells1 = new InstantSpell[instantSpells.length - 1];
-                instantSpells = instantSpells1;
-            }
-        }
-    }
-    public void catchCardAuraSpell(int num)
-    {
-        for(int i = 0 ; i < auraSpells.length; i ++){
-            if(auraSpells[i].numberInDeck == num){
-                auraSpells[i].changePlace(auraSpells[i].spellField);
-                for(int j = i + 1 ; j < auraSpells.length; i ++){
-                    auraSpells[j-1] = auraSpells[j];
-                }
-                AuraSpell[] auraSpells1 = new AuraSpell[auraSpells.length - 1];
-                auraSpells = auraSpells1;
-            }
-        }
-    }
-    public void catchCardNormalMonster(int num)
-    {
-        for(int i = 0 ; i < normalMonsters.length; i ++){
-            if(normalMonsters[i].numberInDeck == num){
-                normalMonsters[i].changePlace(normalMonsters[i].playField);
-                for(int j = i + 1 ; j < normalMonsters.length; i ++){
-                    normalMonsters[j-1] = normalMonsters[j];
-                }
-                NormalMonster[] normalMonsters1 = new NormalMonster[normalMonsters.length - 1];
-                normalMonsters = normalMonsters1;
-            }
-        }
-    }
-    public void catchCardSpellCaster(int num)
-    {
-        for(int i = 0 ; i < spellCasters.length; i ++){
-            if(spellCasters[i].numberInDeck == num){
-                spellCasters[i].changePlace(spellCasters[i].playField);
-                for(int j = i + 1 ; j < spellCasters.length; i ++){
-                    spellCasters[j-1] = spellCasters[j];
-                }
-                SpellCaster[] spellCasters1 = new SpellCaster[spellCasters.length - 1];
-                spellCasters = spellCasters1;
-            }
-        }
-    }
-    public void catchCardGeneral(int num)
-    {
-        for(int i = 0 ; i < generals.length; i ++){
-            if(generals[i].numberInDeck == num){
-                generals[i].changePlace(generals[i].playField);
-                for(int j = i + 1 ; j < generals.length; i ++){
-                    generals[j-1] = generals[j];
-                }
-                General[] generals1 = new General[generals.length - 1];
-                generals = generals1;
-            }
-        }
-    }
-    public void catchCardHero(int num)
-    {
-        for(int i = 0 ; i < heroes.length; i ++){
-            if(heroes[i].numberInDeck == num){
-                heroes[i].changePlace(heroes[i].playField);
-                for(int j = i + 1 ; j < auraSpells.length; i ++){
-                    heroes[j-1] = heroes[j];
-                }
-                Hero[] heroes1 = new Hero[heroes.length - 1];
-                heroes = heroes1;
-            }
-        }
+    public void setName(String name) {
+        this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void catchCardContinuousSpell()
+    {
+        ContinuousSpell[] continuousSpells1 = new ContinuousSpell[continuousSpells.length-1];
+
+        getFirstCardContinuousSpell();
+        for(int i=0 ; i <= continuousSpells.length - 2 ; i++) {
+            continuousSpells1[i]=continuousSpells[i+1];
+        }
+        continuousSpells=continuousSpells1;
+    }
+    public void catchCardInstantSpell()
+    {
+        InstantSpell[] instantSpells1 = new InstantSpell[instantSpells.length-1];
+
+        getFirstCardInstantSpell();
+        for(int i=0 ; i <= instantSpells.length - 2 ; i++) {
+            instantSpells1[i]=instantSpells[i+1];
+        }
+        instantSpells=instantSpells1;
+    }
+    public void catchCardAuraSpell()
+    {
+        AuraSpell[] auraSpells1 = new AuraSpell[auraSpells.length - 1];
+        getFirstCardAuraSpell();
+        for(int i=0 ; i <= auraSpells.length - 2 ; i++) {
+            auraSpells1[i]=auraSpells[i+1];
+        }
+        auraSpells = auraSpells1;
+    }
+    public void catchCardNormalMonster()
+    {
+        NormalMonster[] normalMonsters1 = new NormalMonster[normalMonsters.length - 1];
+        getFirstCardNormalMonster();
+        for( int i=0 ; i <= normalMonsters.length - 2 ; i++)
+        {
+            normalMonsters1[i] = normalMonsters[i+1];
+        }
+        normalMonsters = normalMonsters1;
+    }
+    public void catchCardSpellCaster()
+    {
+        SpellCaster[] spellCasters1 = new SpellCaster[spellCasters.length - 1];
+        getFirstCardSpellCaster();
+        for(int i =0 ; i <= spellCasters.length - 2 ; i++)
+        {
+            spellCasters1[i] = spellCasters[i+1];
+        }
+        spellCasters = spellCasters1;
+    }
+    public void catchCardGeneral()
+    {
+        General[] generals1 = new General[generals.length - 1];
+        getFirstCardGeneral();
+        for( int i=0 ; i <= generals.length - 2 ; i++ )
+        {
+            generals1[i] = generals[i+1];
+        }
+        generals = generals1;
+    }
+    public void catchCardHero()
+    {
+        Hero[] heroes1 = new Hero[heroes.length - 1 ];
+        getFirstCardHero();
+        for( int i=0 ; i <= heroes.length -  2  ; i++)
+        {
+            heroes1[i] = heroes[i+1];
+        }
+        heroes = heroes1;
+
+    }
+
+
+
+    public void catchCard(ContinuousSpell continuousSpell)
+    {
+        int numberOfCard=0 ;
+        for(int i =0 ;i< continuousSpells.length ; i++)
+        {
+            if(continuousSpell.numberInDeck == continuousSpells[i].numberInDeck)
+            {
+                numberOfCard=i;
+                break;
+            }
+        }
+        ContinuousSpell[] continuousSpells1 = new ContinuousSpell[continuousSpells.length-1];
+
+        //getFirstCardContinuousSpell();
+        for(int i=0 ; i < numberOfCard; i++)
+        {
+            continuousSpells1[i]=continuousSpells[i];
+        }
+        for(int i=numberOfCard +1 ; i<continuousSpells.length ; i++)
+        {
+            continuousSpells1[i]=continuousSpells[i+1];
+        }
+        continuousSpells=continuousSpells1;
+    }
+    public void catchCard(InstantSpell instantSpell)
+    {
+        int numberOfCard=0;
+        for(int i=0 ; i<instantSpells.length ; i++)
+        {
+            if(instantSpell.numberInDeck == instantSpells[i].numberInDeck)
+            {
+                numberOfCard=i;
+                break;
+            }
+        }
+        InstantSpell[] instantSpells1 = new InstantSpell[instantSpells.length-1];
+
+        //getFirstCardInstantSpell();
+        for(int i=0 ; i < numberOfCard ; i++) {
+            instantSpells1[i]=instantSpells[i];
+        }
+        for(int i=numberOfCard+1 ; i<instantSpells.length;i++) {
+            instantSpells[i] = instantSpells1[i+1];
+        }
+        instantSpells = instantSpells1;
+    }
+    public void catchCard(AuraSpell auraSpell)
+    {
+        int numberOfCard = 0 ;
+        for(int i =0 ;i< auraSpells.length ; i++)
+        {
+            if(auraSpell.numberInDeck == auraSpells[i].numberInDeck)
+            {
+                numberOfCard=i;
+                break;
+            }
+        }
+        AuraSpell[] auraSpells1 = new AuraSpell[auraSpells.length-1];
+
+        //getFirstCardContinuousSpell();
+        for(int i=0 ; i < numberOfCard; i++)
+        {
+            auraSpells1[i]=auraSpells[i];
+        }
+        for(int i=numberOfCard +1 ; i<auraSpells.length ; i++)
+        {
+            auraSpells1[i]=auraSpells[i+1];
+        }
+        auraSpells=auraSpells1;
+    }
+    public void catchCard(NormalMonster normalMonster)
+    {
+        int numberOfCard = 0;
+        for(int i =0 ;i< normalMonsters.length ; i++)
+        {
+            if(normalMonster.numberInDeck == normalMonsters[i].numberInDeck)
+            {
+                numberOfCard=i;
+                break;
+            }
+        }
+        NormalMonster[] normalMonsters1 = new NormalMonster[normalMonsters.length-1];
+
+        //getFirstCardContinuousSpell();
+        for(int i=0 ; i < numberOfCard; i++)
+        {
+            normalMonsters1[i]=normalMonsters[i];
+        }
+        for(int i=numberOfCard +1 ; i<normalMonsters.length ; i++)
+        {
+            normalMonsters1[i]=normalMonsters[i+1];
+        }
+        normalMonsters=normalMonsters1;
+    }
+    public void catchCard(SpellCaster spellCaster)
+    {
+        int numberOfCard = 0;
+        for(int i =0 ;i< spellCasters.length ; i++)
+        {
+            if(spellCaster.numberInDeck == spellCasters[i].numberInDeck)
+            {
+                numberOfCard=i;
+                break;
+            }
+        }
+        SpellCaster[] spellCasters1 = new SpellCaster[spellCasters.length-1];
+
+        //getFirstCardContinuousSpell();
+        for(int i=0 ; i < numberOfCard; i++)
+        {
+            spellCasters1[i]=spellCasters[i];
+        }
+        for(int i=numberOfCard +1 ; i<spellCasters.length ; i++)
+        {
+            spellCasters1[i]=spellCasters[i+1];
+        }
+        spellCasters=spellCasters1;
+    }
+    public void catchCard(General general)
+    {
+        int numberOfCard = 0;
+        for(int i =0 ;i< generals.length ; i++)
+        {
+            if(general.numberInDeck == generals[i].numberInDeck)
+            {
+                numberOfCard=i;
+                break;
+            }
+        }
+        General[] generals1 = new General[generals.length-1];
+
+        //getFirstCardContinuousSpell();
+        for(int i=0 ; i < numberOfCard; i++)
+        {
+            generals1[i]=generals[i];
+        }
+        for(int i=numberOfCard +1 ; i<generals.length ; i++)
+        {
+            generals1[i]=generals[i+1];
+        }
+        generals=generals1;
+    }
+    public void catchCard(Hero hero)
+    {
+        int numberOfCard = 0;
+        for(int i =0 ;i< heroes.length ; i++)
+        {
+            if(hero.numberInDeck == heroes[i].numberInDeck)
+            {
+                numberOfCard=i;
+                break;
+            }
+        }
+        Hero[] heroes1 = new Hero[heroes.length-1];
+
+        //getFirstCardContinuousSpell();
+        for(int i=0 ; i < numberOfCard; i++)
+        {
+            heroes1[i]=heroes[i];
+        }
+        for(int i=numberOfCard +1 ; i<heroes.length ; i++)
+        {
+            heroes1[i]=heroes[i+1];
+        }
+        heroes=heroes1;
+
+    }
     public void getFirstCardContinuousSpell() {
         //Hand.addCart(continuousSpells[0]);
     }
@@ -204,7 +362,5 @@ class Field {
         }
         heroes=heroes1;
     }
-
-
 
 }

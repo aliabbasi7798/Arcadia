@@ -1,4 +1,4 @@
-public class YellowDrake extends NormalMonster {
+class YellowDrake extends NormalMonster {
     public YellowDrake(int num){
         this.type = "11";
         this.attackPoint = 1000;

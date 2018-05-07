@@ -8,8 +8,7 @@ class ElvenGuardsman extends NormalMonster{
         defender=true;
         nimble=false;
         name="Elven Guardsman";
-        this.numberInDeck = num;
-        this.kind = "Elf";
-
+        this.numberInDeck=num;
+        this.kind="Elf";
     }
 }

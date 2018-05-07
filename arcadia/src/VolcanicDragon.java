@@ -1,4 +1,4 @@
-public class VolcanicDragon extends SpellCaster {
+class VolcanicDragon extends SpellCaster {
     public VolcanicDragon(int num){
         this.type = "12";
         this.attackPoint = 700;
