@@ -1,0 +1,2 @@
+class GraveYard extends Field{
+}

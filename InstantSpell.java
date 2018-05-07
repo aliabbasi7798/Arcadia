@@ -1,4 +1,4 @@
-abstract class InstantSpell extends SpellCard{
+class InstantSpell extends SpellCard{
     public void action(){
 
     }

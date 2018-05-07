@@ -1,3 +1,3 @@
-abstract class NormalMonster extends MonsterCard{
+class NormalMonster extends MonsterCard{
 
 }
