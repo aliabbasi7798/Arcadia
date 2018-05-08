@@ -29,12 +29,12 @@ class ElvenSorcerss extends SpellCaster{
         int a=team.random(team.spellField);
         for (int i=0 ; i<team.spellField.auraSpells.length ; i++){
             if (team.spellField.auraSpells[i].getNumberInDeck()==a){
-                team.changePlace(team.spellField, team.graveYard, team.spellField.auraSpells[0]);
+                team.changePlace(team.spellField, team.graveYard, team.spellField.auraSpells[i]);
             }
         }
         for (int i=0 ; i<team.spellField.continuousSpells.length ; i++){
             if (team.spellField.continuousSpells[i].getNumberInDeck()==a){
-                team.changePlace(team.spellField, team.graveYard, team.spellField.continuousSpells[0]);
+                team.changePlace(team.spellField, team.graveYard, team.spellField.continuousSpells[i]);
             }
         }
     }

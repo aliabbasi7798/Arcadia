@@ -10,6 +10,8 @@ class NobleElf extends General{
         this.nimble=false;
         this.defender=false;
         this.numberInDeck=number;
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
 
     public void battleCry(Team team){

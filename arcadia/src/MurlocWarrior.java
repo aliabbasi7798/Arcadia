@@ -1,12 +1,12 @@
-public class MurlocCrawler extends MonsterCard
+class MurlocWarrior extends MonsterCard
 {
-    public MurlocCrawler(int num)
+    public MurlocWarrior(int num)
     {
         this.type="11";
-        this.attackPoint=500;
-        this.healthPoint=200;
-        this.magicPoint=1;
-        name="Murloc Crawler";
+        this.attackPoint=600;
+        this.healthPoint=600;
+        this.magicPoint=2;
+        name="Murloc Warrior";
         nimble=false;
         defender=false;
         this.kind = "Atlantain";

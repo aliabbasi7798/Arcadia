@@ -4,12 +4,15 @@ class Card {
     protected String name;
     protected String place;
 
+
+
     protected boolean deck=true;
     protected boolean hand=false;
     protected boolean graveYard=false;
     protected String type;//"11":normal   "12":spellcaster    "13":general   "14":hero    "21":instantspell    "22":continuousspell     "23":auraspell
 
     protected int numberInDeck;
+
 
     public Card(){
 

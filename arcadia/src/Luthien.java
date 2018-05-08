@@ -10,6 +10,8 @@ class Luthien extends Hero{
         this.nimble=false;
         this.defender=false;
         this.type="14";
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
 
     public void battleCry(Team team/*own team*/){

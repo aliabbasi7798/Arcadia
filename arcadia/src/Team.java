@@ -10,25 +10,29 @@ class Team {
     public void changePlace(Field exit, Field enter, NormalMonster normalMonster){
         enter.catchCard(normalMonster);
         exit.addCard(normalMonster);
-        normalMonster.setName(enter.getName());
+        normalMonster.setPlace(enter.getName());
+        normalMonster.buffer();
     }
 
     public void changePlace(Field exit, Field enter, SpellCaster spellCaster){
         exit.catchCard(spellCaster);
         enter.addCard(spellCaster);
-        spellCaster.setName(enter.getName());
+        spellCaster.setPlace(enter.getName());
+        spellCaster.buffer();
     }
 
     public void changePlace(Field exit, Field enter, General general){
         exit.catchCard(general);
         enter.addCard(general);
-        general.setName(enter.getName());
+        general.setPlace(enter.getName());
+        general.buffer();
     }
 
     public void changePlace(Field exit, Field enter, Hero hero){
         exit.catchCard(hero);
         enter.addCard(hero);
-        hero.setName(enter.getName());
+        hero.setPlace(enter.getName());
+        hero.buffer();
     }
 
 

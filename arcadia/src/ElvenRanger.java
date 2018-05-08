@@ -10,5 +10,7 @@ class ElvenRanger extends NormalMonster{
         defender=false;
         this.kind="Elf";
         this.numberInDeck=num;
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
 }

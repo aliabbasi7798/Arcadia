@@ -1,15 +1,15 @@
-class ElvenGuardsman extends NormalMonster{
+class LivingArmor extends NormalMonster{
 
-    public ElvenGuardsman(int num){
+    public LivingArmor(int num){
         this.type="11";
-        this.attackPoint=500;
+        this.attackPoint=400;
         this.healthPoint=1500;
         this.magicPoint=5;
         defender=true;
         nimble=false;
-        name="Elven Guardsman";
+        name="Living Armor";
         this.numberInDeck=num;
-        this.kind="Elf";
+        this.kind="Demonic";
         this.ap=this.attackPoint;
         this.hp=this.healthPoint;
     }
