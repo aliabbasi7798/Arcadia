@@ -4,11 +4,18 @@ class MonsterCard extends Card{
 
     protected boolean playField=false;
 
+    protected final int ap=0;
+    protected final int hp=0;
+
     protected boolean nimble;
     protected boolean defender;
 
     public String kind;
 
+    public void buffer(){
+        this.attackPoint=ap;
+        this.healthPoint=hp;
+    }
 
     public String getKind() {
         return kind;
