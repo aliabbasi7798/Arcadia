@@ -11,5 +11,7 @@
          defender=true;
          this.kind = "Atlantain";
          this.numberInDeck = num;
+         this.ap=this.attackPoint;
+         this.hp=this.healthPoint;
      }
 }

@@ -1,4 +1,4 @@
- class SeaSerpent extends MonsterCard
+ class SeaSerpent extends SpellCaster
 {
     public SeaSerpent(int num)
     {
@@ -11,6 +11,8 @@
         defender=false;
         this.kind = "Atlantain";
         this.numberInDeck = num;
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
     public void spell(Team team , MonsterCard monsterCard)
     {

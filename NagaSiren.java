@@ -1,4 +1,4 @@
-class NagaSiren extends MonsterCard
+class NagaSiren extends SpellCaster
 {
     public NagaSiren(int num)
     {
@@ -11,6 +11,8 @@ class NagaSiren extends MonsterCard
         defender=false;
         this.kind = "Atlantain";
         this.numberInDeck = num;
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
     public void spell(Team team)
     {
