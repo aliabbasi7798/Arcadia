@@ -8,8 +8,10 @@ class ElvenDruid extends SpellCaster{
         this.defender=false;
         this.magicPoint=5;
         this.name="Elven Druid";
-        this.kind = "Elf"
-        this.numberInDeck = num;
+        this.numberInDeck=num;
+        this.kind="Elf";
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
 
     public void spell(MonsterCard monsterCard){

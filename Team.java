@@ -1,12 +1,64 @@
+import java.util.Random;
 class Team {
     Hand hand=new Hand();
     Deck deck=new Deck();
     GraveYard graveYard=new GraveYard();
     PlayField playField=new PlayField();
     SpellField spellField=new SpellField();
+
+
+    public void changePlace(Field exit, Field enter, NormalMonster normalMonster){
+        enter.catchCard(normalMonster);
+        exit.addCard(normalMonster);
+        normalMonster.setPlace(enter.getName());
+        normalMonster.buffer();
+    }
+
+    public void changePlace(Field exit, Field enter, SpellCaster spellCaster){
+        exit.catchCard(spellCaster);
+        enter.addCard(spellCaster);
+        spellCaster.setPlace(enter.getName());
+        spellCaster.buffer();
+    }
+
+    public void changePlace(Field exit, Field enter, General general){
+        exit.catchCard(general);
+        enter.addCard(general);
+        general.setPlace(enter.getName());
+        general.buffer();
+    }
+
+    public void changePlace(Field exit, Field enter, Hero hero){
+        exit.catchCard(hero);
+        enter.addCard(hero);
+        hero.setPlace(enter.getName());
+        hero.buffer();
+    }
+
+
+    public void changePlace(Field exit, Field enter, InstantSpell instantSpell){
+        exit.catchCard(instantSpell);
+        enter.addCard(instantSpell);
+        instantSpell.setName(enter.getName());
+    }
+
+    public void changePlace(Field exit, Field enter, ContinuousSpell continuousSpell){
+        exit.catchCard(continuousSpell);
+        enter.addCard(continuousSpell);
+        continuousSpell.setName(enter.getName());
+    }
+
+    public void changePlace(Field exit, Field enter, AuraSpell auraSpell){
+        exit.catchCard(auraSpell);
+        enter.addCard(auraSpell);
+        auraSpell.setName(enter.getName());
+    }
+
+
+
+
     public int random(Hand hand)
     {
-        int
         int number1 = 0;
         number1 += hand.continuousSpells.length;
         int number2 = number1+hand.instantSpells.length;
@@ -19,11 +71,11 @@ class Team {
         int number = rnd.nextInt(number7)+1;
         if(number >= 1 && number <=number1)
         {
-          return hand.continuousSpells[number-1].numberInDeck;
+            return hand.continuousSpells[number-1].numberInDeck;
         }
         else if(number> number1 && number <= number2)
         {
-          return hand.instantSpells[number-number1-1].numberInDeck;
+            return hand.instantSpells[number-number1-1].numberInDeck;
         }
         else if(number > number2 && number <= number3)
         {
@@ -49,7 +101,6 @@ class Team {
     }
     public int random(GraveYard graveYard)
     {
-        int
         int number1 = 0;
         number1 += graveYard.continuousSpells.length;
         int number2 = number1+graveYard.instantSpells.length;
@@ -92,7 +143,6 @@ class Team {
     }
     public int random(Deck deck)
     {
-        int
         int number1 = 0;
         number1 += deck.continuousSpells.length;
         int number2 = number1+deck.instantSpells.length;
@@ -135,7 +185,6 @@ class Team {
     }
     public int random(PlayField playField)
     {
-        int
         int number1 = 0;
         number1 += playField.continuousSpells.length;
         int number2 = number1+playField.instantSpells.length;
@@ -178,7 +227,6 @@ class Team {
     }
     public int random(SpellField spellField)
     {
-        int
         int number1 = 0;
         number1 += spellField.continuousSpells.length;
         int number2 = number1+spellField.instantSpells.length;

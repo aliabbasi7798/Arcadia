@@ -8,7 +8,9 @@ class ElvenRanger extends NormalMonster{
         name="Elven Ranger";
         nimble=false;
         defender=false;
-        this.kind = "Elf";
-        this.numberInDeck = num;
+        this.kind="Elf";
+        this.numberInDeck=num;
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
 }

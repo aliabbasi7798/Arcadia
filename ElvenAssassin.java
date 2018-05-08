@@ -8,8 +8,9 @@ class ElvenAssassin extends NormalMonster{
         this.nimble=true;
         this.defender=false;
         this.name="Elven Assassin";
-        this.kind = "Elf";
-        this.numberInDeck = num;
-
+        this.kind="Elf";
+        this.numberInDeck=num;
+        this.ap=this.attackPoint;
+        this.hp=this.healthPoint;
     }
 }
